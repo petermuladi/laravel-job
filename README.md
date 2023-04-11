@@ -27,8 +27,9 @@ The application includes robust error handling to catch and display any errors t
 ## Installation
 
 To install and run the application, follow these steps:
+☝ go to my-app folder
 
-1. Clone the repository
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/petermuladi/laravel-job.git
