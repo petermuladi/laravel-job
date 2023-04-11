@@ -27,7 +27,7 @@ The application includes robust error handling to catch and display any errors t
 ## Installation
 
 To install and run the application, follow these steps:
-☝ go to my-app folder
+**☝ go to my-app folder**
 
 **1. Clone the repository**
 
@@ -35,19 +35,20 @@ To install and run the application, follow these steps:
 git clone https://github.com/petermuladi/laravel-job.git
 ```
 
-2. Install dependencies
+**2. Install dependencies**
 
 ```bash
 composer install
 ```
+☝
 
-3. Create a new .env file
+**3. Create a new .env file**
 
 ```bash
 cp .env.example .env
 ```
 
-4. Update the .env file with your database credentials
+**4. Update the .env file with your database credentials**
 
 ```bash
 DB_DATABASE=[your-database-name]
@@ -55,25 +56,25 @@ DB_USERNAME=[your-database-username]
 DB_PASSWORD=[your-database-password]
 ```
 
-5. Generate an application key
+**5. Generate an application key**
 
 ```bash
 php artisan key:generate
 ```
 
-6. Run database migrations
+**6. Run database migrations**
 
 ```bash
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
-7. Start the web server
+**7. Start the web server**
 
 ```bash
 php artisan serve
 ```
 
-8. Navigate to the project URL
+**8. Navigate to the project URL**
 
 ```bash
 localhost:8000
