@@ -34,6 +34,7 @@ To install and run the application, follow these steps:
 git clone https://github.com/petermuladi/laravel-job.git
 ```
 ### 👉 go to my-app folder
+***(laravel-job/my-app)***
 
 ### 2. Install dependencies
 
