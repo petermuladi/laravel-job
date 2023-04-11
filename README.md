@@ -33,9 +33,7 @@ To install and run the application, follow these steps:
 ```bash
 git clone https://github.com/petermuladi/laravel-job.git
 ```
-<br>
-**👉 go to my-app folder**
-
+### 👉 go to my-app folder
 
 ### 2. Install dependencies
 
@@ -67,7 +65,6 @@ composer --version
 ```
 
 After installing Composer, you can proceed with the installation of the dependencies for your project using the **composer install** command.
-
 
 ### 3. Create a new .env file
 
