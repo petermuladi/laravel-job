@@ -37,7 +37,7 @@ git clone https://github.com/petermuladi/laravel-job.git
 2. Install dependencies
 
 ```bash
-composer install
+**composer install**
 ```
 
 3. Create a new .env file
