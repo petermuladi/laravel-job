@@ -6,7 +6,7 @@
 
 **Project is created with**
 
-- Laravel: v8.0.0
+- Laravel: v10.5.1
 - Bootstrap: v5.3.0
 - PHP: v8.0.13
 - MySQL: v8.0.27
