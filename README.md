@@ -1,4 +1,4 @@
-## 🎯LARAVEL Job Management Application
+# 🎯LARAVEL Job Management Application
 
 #### The Job Management Application is a PHP web application built with the Laravel framework that allows users to manage job listings. The application is designed for job seekers to create and publish their own job listings, which they can update or delete anytime they need. The primary goal of the application is to make it easier for job seekers to search for job openings and provide a platform for employers to find potential candidates.
 
