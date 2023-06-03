@@ -9,7 +9,7 @@
 - Laravel: v10.5.1
 - Bootstrap: v5.3.0
 - PHP/8.1.10
-- MySQL: v8.0.27
+- MySQL: v8.0.27 
 
 
 ## Features
