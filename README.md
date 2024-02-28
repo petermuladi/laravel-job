@@ -1,4 +1,4 @@
-## 🎯LARAVEL Job Management Application
+# 🎯LARAVEL Job Management Application
 
 #### The Job Management Application is a PHP web application built with the Laravel framework that allows users to manage job listings. The application is designed for job seekers to create and publish their own job listings, which they can update or delete anytime they need. The primary goal of the application is to make it easier for job seekers to search for job openings and provide a platform for employers to find potential candidates.
 
@@ -6,10 +6,10 @@
 
 **Project is created with**
 
-- Laravel: v8.0.0
+- Laravel: v10.5.1
 - Bootstrap: v5.3.0
-- PHP: v8.0.13
-- MySQL: v8.0.27
+- PHP/8.1.10
+- MySQL: v8.0.27 
 
 
 ## Features
@@ -28,25 +28,52 @@ The application includes robust error handling to catch and display any errors t
 
 To install and run the application, follow these steps:
 
-1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/petermuladi/laravel-job.git
 ```
+### 👉 go to my-app folder
+***(laravel-job/my-app)***
 
-2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 composer install
 ```
+☝ If Composer is not installed on your system, follow these steps to install it:
 
-3. Create a new .env file
+Download the Composer installer from https://getcomposer.org/download/
+Open a command prompt or terminal window and navigate to the directory where the installer was downloaded
+Run the installer:
+
+**On Windows:**
+
+```bash
+php composer-setup.php
+```
+
+**On macOS or Linux:**
+
+```bash
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+```
+
+Verify that Composer was installed successfully by running the following command in your terminal or command prompt window:
+
+```bash
+composer --version
+```
+
+After installing Composer, you can proceed with the installation of the dependencies for your project using the **composer install** command.
+
+### 3. Create a new .env file
 
 ```bash
 cp .env.example .env
 ```
 
-4. Update the .env file with your database credentials
+### 4. Update the .env file with your database credentials
 
 ```bash
 DB_DATABASE=[your-database-name]
@@ -54,25 +81,25 @@ DB_USERNAME=[your-database-username]
 DB_PASSWORD=[your-database-password]
 ```
 
-5. Generate an application key
+### 5. Generate an application key
 
 ```bash
 php artisan key:generate
 ```
 
-6. Run database migrations
+### 6. Run database migrations
 
 ```bash
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
-7. Start the web server
+### 7. Start the web server
 
 ```bash
 php artisan serve
 ```
 
-8. Navigate to the project URL
+### 8. Navigate to the project URL
 
 ```bash
 localhost:8000
