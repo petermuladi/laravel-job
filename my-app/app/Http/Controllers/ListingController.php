@@ -9,6 +9,11 @@ use Mockery\Undefined; //requestekhez kötelező behivatkozni.
 
 class ListingController extends Controller
 {
+    /**
+     * index
+     *
+     * @return void
+     */
     public function index()
     {
         $listings = Listing::latest()->filter(request(['tag', 'search']))->paginate(6);
@@ -23,6 +28,12 @@ class ListingController extends Controller
         }
     }
 
+    /**
+     * show
+     *
+     * @param  mixed $id
+     * @return void
+     */
     public function show($id)
     {
         $listing = Listing::find($id);
@@ -38,11 +49,23 @@ class ListingController extends Controller
         }
     }
 
+    /**
+     * create
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function create(Request $request)
     {
         return view('create');
     }
 
+    /**
+     * store
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function store(Request $request)
     {
         $customMessage =
@@ -61,12 +84,9 @@ class ListingController extends Controller
 
         ], $customMessage);
 
-
         if ($request->hasFile('logo')) {
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
         }
-
-        dd($formFields);
 
         $formFields['user_id'] = auth()->id();
 
@@ -74,13 +94,25 @@ class ListingController extends Controller
         return redirect('/')->with('message', 'Job Created Success');
     }
 
-
+    /**
+     * edit
+     *
+     * @param  mixed $id
+     * @return void
+     */
     public function edit($id)
     {
         $listing = Listing::find($id);
         return view('edit', ['listings' => $listing]);
     }
 
+    /**
+     * update
+     *
+     * @param  mixed $request
+     * @param  mixed $id
+     * @return void
+     */
     public function update(Request $request, $id)
     {
 
@@ -112,15 +144,24 @@ class ListingController extends Controller
         return redirect('/listings/manage')->with('message', 'Job Updated Success');
     }
 
-
+    /**
+     * destroy
+     *
+     * @param  mixed $id
+     * @return void
+     */
     public function destroy($id)
     {
         $listing = Listing::findOrFail($id);
         $listing->delete($listing);
         return redirect('listings/manage')->with('message', 'Deleted Success');
-
     }
 
+    /**
+     * manage
+     *
+     * @return void
+     */
     public function manage()
     {
         return view('manage', [

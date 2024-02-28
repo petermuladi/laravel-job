@@ -9,16 +9,32 @@ use Illuminate\Validation\Rule;
 class UserController extends Controller
 {
 
+    /**
+     * registrate
+     *
+     * @return void
+     */
     public function registrate()
     {
         return view('register');
     }
 
+    /**
+     * login
+     *
+     * @return void
+     */
     public function login()
     {
         return view('login');
     }
 
+    /**
+     * loginUser
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function loginUser(Request $request)
     {
         $formFields = $request->validate([
@@ -35,7 +51,12 @@ class UserController extends Controller
         return back()->withErrors(['email' => 'Invalid Email or Password!'])->onlyInput('email');
     }
 
-
+    /**
+     * store
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function store(Request $request)
     {
         $formFields = $request->validate([
@@ -51,6 +72,12 @@ class UserController extends Controller
         return redirect("/")->with('message', 'User Created and Logged in!');
     }
 
+    /**
+     * logout
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function logout(Request $request)
     {
         auth()->logout();
